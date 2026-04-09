@@ -14,3 +14,12 @@ Use `brew services list`
 Then:
 
 `brew services stop postgresql@14`
+
+----
+
+[Thanks stackoverflow!](https://stackoverflow.com/questions/34173451/stop-postgresql-service-on-mac-via-terminal)
+
+---
+More homebrew learning :
+`Brew install openjdk` : needs a symlink to really work : [thanks to John Siu's blog](https://johnsiu.com/blog/macos-brew-java/). And I learned to use `brew info openjdk` : which gives this vital 
+follow up task. 
