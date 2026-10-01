@@ -40,6 +40,6 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: julzhk/julzhk.github.io
-          publish_branch: master
+          publish_branch: gh-pages
           publish_dir: ./_site
           commit_message: "Publish TIL site from julzhk/til@${{ github.sha }}"
