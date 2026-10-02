@@ -5,6 +5,7 @@ This new phase of Generative-AI calls for a new vocabulary of experiences. I'll 
 * [AI Psychosis](https://en.wikipedia.org/wiki/AI-induced_psychosis?utm_source=substack&utm_medium=email) 
 * [Deep Blue Feeling](https://simonwillison.net/2026/Feb/15/deep-blue/)
 * Roko's Basilisk
+* Slop Grenade: Submitting a PR without any consideration of code review or consequences. 2000 files changed in one PR? YOLO! 
 
 ### Experiences without a name yet. 
 
