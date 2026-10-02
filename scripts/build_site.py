@@ -63,7 +63,7 @@ def split_title(body_html: str, fallback: str) -> tuple[str, str]:
     return title or fallback, body_html[match.end():]
 
 
-def summarize(body_html: str, length: int = 180) -> str:
+def summarize(body_html: str, length: int = 280) -> str:
     text = re.sub(r"<pre.*?</pre>", " ", body_html, flags=re.S)
     text = html.unescape(re.sub(r"<[^>]+>", " ", text))
     text = " ".join(text.split())
