@@ -5,7 +5,7 @@ This new phase of Generative-AI calls for a new vocabulary of experiences. I'll 
 * [AI Psychosis](https://en.wikipedia.org/wiki/AI-induced_psychosis?utm_source=substack&utm_medium=email) 
 * [Deep Blue Feeling](https://simonwillison.net/2026/Feb/15/deep-blue/)
 * Roko's Basilisk
-* Slop Grenade: Submitting a PR without any consideration of code review or consequences. 2000 files changed in one PR? YOLO! 
+* [Slop Grenade](https://fortune.com/2026/09/17/shopify-tobias-lutke-ai-slop-grenades/): Submitting a PR without any consideration of code review or consequences. 2000 files changed in one PR? YOLO! 
 
 ### Experiences without a name yet. 
 
@@ -29,3 +29,5 @@ _The feeling of..._
 * The realization that giving code review comments to a colleague means they'll just paste them into an AI and they'll just ship the results and pretend they care. Such AI!
 * That the luddite's were onto something. Such AI!
 * One day this will all revert to a new normal. Bring on the [AI Pendulum](https://jonathanstark.com/daily/20260927-2359-the-inevitable-ai-pendulum)
+* oh gawd another conversation starts elsewhere but finishes in an AI rant. Such AI!
+* AI is just so much better than my worst teammates and the AI likes to flatter me. Such AI!
