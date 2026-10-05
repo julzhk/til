@@ -29,7 +29,7 @@ _The feeling of..._
 * AI making me wish I was a plumber. Or a landlord. Such AI! 
 * Oh you're in profession X and you don't realise the coming storm? Buckle up. Such AI!
 * Slight embarassment that I can't take too much credit for that thing - all I did was ask an AI nicely. Such AI!
-* Why should I buy that Saas? I'll just get AI to build me it. Such AI!
+* Why should I buy (worse: subscribe to) that Saas? I'll just get AI to build me it. Such AI!
 * The realization that giving code review comments to a colleague means they'll just paste them into an AI and they'll just ship the results and pretend they care. Such AI!
 * That the luddite's were onto something. Such AI!
 * One day this will all revert to a new normal. Bring on the [AI Pendulum](https://jonathanstark.com/daily/20260927-2359-the-inevitable-ai-pendulum)
