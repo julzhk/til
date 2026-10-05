@@ -35,3 +35,4 @@ _The feeling of..._
 * One day this will all revert to a new normal. Bring on the [AI Pendulum](https://jonathanstark.com/daily/20260927-2359-the-inevitable-ai-pendulum)
 * oh gawd another conversation starts elsewhere but finishes in an AI rant. Such AI!
 * AI is just so much better than my worst teammates and the AI likes to flatter me. Such AI!
+* The feeling that the old project management 'iron triangle' (choose two from: Good/Fast/Cheap') has turned into choosing fast twice. Such AI!
