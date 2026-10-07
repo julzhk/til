@@ -36,3 +36,5 @@ _The feeling of..._
 * oh gawd another conversation starts elsewhere but finishes in an AI rant. Such AI!
 * AI is just so much better than my worst teammates and the AI likes to flatter me. Such AI!
 * The feeling that the old project management 'iron triangle' (choose two from: Good/Fast/Cheap') has turned into choosing fast twice. Such AI!
+* If I'd known my open source code was going to be slurped up and turned into AI, I'd've locked it up like a bandit. Such AI!
+* 
