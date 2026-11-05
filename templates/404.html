@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui %}
+
+{% block title %}Not found · {{ site.author }}{% endblock %}
+
+{% block content %}
+{{ ui.page_header("Page not found", "Whatever was here has wandered off. It might have been renamed, or it might never have existed.") }}
+<a href="/index.html" class="text-accent hover:underline">Back home!</a>
+{% endblock %}

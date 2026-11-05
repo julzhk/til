@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui %}
+
+{% block title %}{{ post.title }} · {{ site.author }}{% endblock %}
+{% block description %}{{ post.summary }}{% endblock %}
+
+{% block content %}
+<article class="max-w-3xl">
+  <header class="mb-10">
+    <a href="{{ root }}blog/index.html" class="text-sm text-stone-500 hover:text-accent transition-colors">&larr; All posts</a>
+    <h1 class="mt-6 font-serif text-4xl sm:text-5xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">{{ post.title }}</h1>
+    <div class="mt-4 font-mono text-xs text-stone-400 flex gap-4">
+      <time datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%B %-d, %Y') }}</time>
+      <a class="hover:text-accent" href="{{ site.repo_url }}/blob/master/{{ post.source }}">View source</a>
+    </div>
+  </header>
+  {% call ui.prose() %}{{ post.body_html | safe }}{% endcall %}
+</article>
+{% endblock %}

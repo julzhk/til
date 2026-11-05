@@ -1,0 +1,18 @@
+{% extends "page.html" %}
+{% import "macros.html" as ui %}
+
+{% block extra %}
+<dl class="mt-10 max-w-xl divide-y divide-stone-200 dark:divide-stone-800 border-y border-stone-200 dark:border-stone-800">
+  {% for label, href, text in [
+      ("Email", "mailto:" ~ site.email, site.email),
+      ("LinkedIn", site.linkedin_url, "My linkedIn profile"),
+      ("GitHub", site.github_url, site.github_url | replace("https://", "")),
+      ("Résumé", site.resume_path, "Downloadable PDF"),
+  ] %}
+  <div class="flex justify-between gap-6 py-4">
+    <dt class="text-stone-500">{{ label }}</dt>
+    <dd><a class="text-stone-900 dark:text-stone-100 hover:text-accent transition-colors" href="{{ href }}">{{ text }}</a></dd>
+  </div>
+  {% endfor %}
+</dl>
+{% endblock %}

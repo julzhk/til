@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui %}
+
+{% block title %}{{ site.author }}{% endblock %}
+
+{% block content %}
+<section class="pb-16">
+  <p class="font-mono text-sm text-accent">Hi! I'm</p>
+  <h1 class="mt-2 font-serif text-5xl sm:text-6xl font-semibold tracking-tight text-stone-900 dark:text-stone-50">{{ site.author }}</h1>
+  <p class="mt-6 text-lg sm:text-xl leading-relaxed max-w-2xl">
+    I'm a lead software developer who mostly working in backend Engineering using Python.
+    But not just that: let's build the right thing, make it delightful, & let's make the team effective and efficient...
+    This is just my little outpost in the wild wild internet:  notes on things I've learned, projects I've built and opinions.
+  </p>
+  <div class="mt-8 flex flex-wrap gap-3 text-sm font-medium">
+    {{ ui.button("'Today I learned' is my blog", "blog/index.html", primary=true) }}
+    {{ ui.button("About me", "about.html") }}
+  </div>
+</section>
+
+<section class="pb-16">
+  {{ ui.section_heading("Latest 'Today I learned'", "All posts", "blog/index.html") }}
+  {{ ui.post_list(posts[:6], root, "%Y-%m-%d") }}
+</section>
+
+<section>
+  {{ ui.section_heading("Selected projects", "All projects", "projects.html") }}
+  <div class="mt-6">{{ ui.project_grid(projects[:2]) }}</div>
+</section>
+{% endblock %}

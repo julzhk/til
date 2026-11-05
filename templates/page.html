@@ -1,0 +1,9 @@
+{#- Generic Markdown page (pages/<name>.md). A page can have its own template, pages/<name>.html, extending this one. -#}
+{% extends "base.html" %}
+{% import "macros.html" as ui %}
+
+{% block content %}
+{{ ui.page_header(title) }}
+{% call ui.prose("max-w-3xl lede-first") %}{{ body_html | safe }}{% endcall %}
+{% block extra %}{% endblock %}
+{% endblock %}

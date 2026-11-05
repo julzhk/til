@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "macros.html" as ui %}
+
+{% block content %}
+<header class="mb-12">
+  <h1 class="font-serif text-4xl sm:text-5xl font-semibold tracking-tight text-stone-900 dark:text-stone-50 py-6">Blog</h1>
+  <div class="lede">
+    <p>
+    A collection of concise notes on small things I learn day to day across a variety of languages and technologies.
+    Many are things that aren't really a full blog post: just jottings and notes.
+    </p>
+    <p>So I'm thinking: 'I'm learning this now & I want to remember this for the future'
+... as well as: 'I'm realising I want to retain this and making notes helps me consolidate and retain this info'</p>
+    <p>
+      Inspired by <a href="https://github.com/jbranchaud/til">jbranchaud/til</a>
+    and <a href="https://til.simonwillison.net.">https://til.simonwillison.net</a>.
+</p>
+    <p>
+    And a discussion about 'TIL' in <a href="https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9">
+    and in this blog post</a>. And humble attempt at: <a href="https://dev.to/t/learninpublic">Learning In Public™</a>
+    </p>
+    <p class="font-mono text-sm text-accent">{{ posts | length }} posts</p>
+  </div>
+</header>
+
+{% for year, year_posts in posts | groupby("date.year") | reverse %}
+<section class="mb-12">
+  <h2 class="font-serif text-2xl font-semibold text-stone-900 dark:text-stone-50 mb-2">{{ year }}</h2>
+  {{ ui.post_list(year_posts, root) }}
+</section>
+{% endfor %}
+{% endblock %}

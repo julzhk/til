@@ -4,7 +4,15 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.13"
 dependencies = [
+    "jinja2>=3.1",
     "markdown>=3.11",
     "notebook>=7.5.1",
     "polars>=1.38.1",
+    "watchdog>=7.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "invoke>=3.0.3",
+    "watchdog>=7.0.0",
 ]

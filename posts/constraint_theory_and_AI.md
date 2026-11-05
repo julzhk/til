@@ -30,3 +30,7 @@ Lean manufacturing and '[theory of constraints](http://focusandleverage.blogspot
 overloaded - and even slower!
 
 Lean would also have comments about speed-ups making 'quality' issues harder, worse and in all ways more difficult. But that's another story.
+
+## And hiring pipelines?
+
+This bottleneck reminds 

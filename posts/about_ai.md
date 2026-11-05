@@ -29,4 +29,4 @@ The rise of the one-person tech company is inevitable. tbh: If I wanted to launc
 expert thinks they can use AI to do marketing and the tech stuff themselves too! 
 
 Actually that touches on another aspect: AI isn't great in a team context; each AI goes off on a tangent; the AI is all disconnected from the discussion and context. It can get a bit distracting 
-and siloed. 
+and siloed. It's like having a bunch of disconnected experts working in silos, rather than a cohesive team.

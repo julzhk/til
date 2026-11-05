@@ -1,6 +1,6 @@
 name: Publish TIL site
 
-# Builds a static site from the top-level markdown files and publishes it
+# Builds a static site from posts/, pages/ and static/ and publishes it
 # to the gh-pages branch of julzhk/julzhk.github.io (served at https://julzhk.github.io).
 #
 # One-time setup:
@@ -11,7 +11,7 @@ name: Publish TIL site
 on:
   push:
     branches: [master]
-    paths: ["*.md", "scripts/build_site.py", ".github/workflows/publish-site.yml"]
+    paths: ["posts/**", "pages/**", "templates/**", "static/**", "scripts/build_site.py", ".github/workflows/publish-site.yml"]
   workflow_dispatch:
 
 concurrency:
@@ -32,7 +32,7 @@ jobs:
 
       - name: Build site
         run: |
-          pip install markdown
+          pip install markdown jinja2
           python scripts/build_site.py _site
 
       - name: Deploy to julzhk.github.io

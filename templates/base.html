@@ -1,0 +1,144 @@
+{% import "macros.html" as ui %}
+{#- `root` is the relative path back to the site root: "" or "../" (or "/" for the 404 page). -#}
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ title }} · {{ site.author }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ site.tagline }}{% endblock %}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.author }}" href="{{ root }}feed.xml">
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    colors: {accent: 'rgb(var(--accent) / <alpha-value>)'},
+                    fontFamily: {
+                        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+                        serif: ['"Fraunces"', 'Georgia', 'serif'],
+                        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+                    },
+                }
+            },
+            plugins: [
+                // The Play CDN has no global `plugin()` helper; a plugin is just {handler}.
+                {handler: function ({addBase}) {
+                    addBase({
+                        'a': {
+                            color: '#4f46e5', // text-indigo-600
+                            textDecoration: 'none',
+                            transitionProperty: 'all',
+                            transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                            transitionDuration: '200ms',
+                        },
+                        'a:hover': {
+                            color: '#3730a3', // text-indigo-800
+                            textDecoration: 'underline',
+                            textDecorationThickness: '2px',
+                            textUnderlineOffset: '4px',
+                        },
+                    })
+                }}
+            ]
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            /* Leading paragraph under a page title. Use .lede directly, or put .lede-first on a
+               prose wrapper to style its first paragraph (if the content opens with one). */
+            .lede,
+            .lede-first > p:first-child {
+                @apply mt-4 text-lg text-stone-500 dark:text-stone-400 max-w-2xl space-y-4;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => hljs.highlightAll());</script>
+    <style>
+        :root {
+            --accent: 168 69 40;
+        }
+
+        /* rust */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --accent: 232 146 108;
+            }
+        }
+
+        .prose pre {
+            padding: 0;
+        }
+
+        .prose pre code.hljs {
+            border-radius: 0.5rem;
+        }
+
+        ::selection {
+            background: rgb(var(--accent) / 0.2);
+        }
+    </style>
+</head>
+<body id="top" class="min-h-full flex flex-col bg-stone-50 text-stone-700 dark:bg-stone-950 dark:text-stone-300 antialiased">
+
+<header class="sticky top-0 z-20 bg-stone-50/85 dark:bg-stone-950/85 backdrop-blur border-b border-stone-200 dark:border-stone-800">
+    <div class="max-w-4xl mx-auto px-5 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <a href="{{ root }}index.html" class="pt-4 sm:py-4 font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-accent transition-colors">Jooles.dev</a>
+        <nav aria-label="Main" class="-mx-5 px-5 sm:mx-0 sm:px-0 overflow-x-auto">
+            <div class="flex gap-6 text-sm font-medium">
+                {% for key, label, href in nav %}
+                {{ ui.nav_link(label, root ~ href, key == active) }}
+                {% endfor %}
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="flex-1 w-full max-w-4xl mx-auto px-5 pt-14">
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="mt-24 border-t border-stone-200 dark:border-stone-800">
+    <div class="max-w-4xl mx-auto px-5 py-12 grid gap-10 sm:grid-cols-[2fr_1fr_1fr] text-sm">
+        <div>
+            <p class="font-serif text-lg font-semibold text-stone-900 dark:text-stone-50">{{ site.author }}</p>
+            <p class="mt-2 text-stone-500 dark:text-stone-400 max-w-xs">{{ site.tagline }}</p>
+            <p id="quip" class="mt-4 italic text-stone-500 dark:text-stone-400">{{ site.quips | random }}</p>
+        </div>
+        {{ ui.footer_links("Elsewhere", [
+        ("Résumé", root ~ site.resume_path),
+        ("Email", "mailto:" ~ site.email),
+        ("GitHub", site.github_url),
+        ("LinkedIn", site.linkedin_url),
+        ]) }}
+        {{ ui.footer_links("Site", [
+        ("Blog", root ~ "blog/index.html"),
+        ("Now", root ~ "now.html"),
+        ("Uses", root ~ "uses.html"),
+        ("RSS feed", root ~ "feed.xml"),
+        ]) }}
+    </div>
+    <div class="border-t border-stone-200 dark:border-stone-800">
+        <div class="max-w-4xl mx-auto px-5 py-5 flex flex-col sm:flex-row gap-2 sm:justify-between text-xs font-mono text-stone-400">
+            <p>&copy; {{ build.time.year }} {{ site.author }} &middot; made in {{ site.location }}</p>
+            <p>{{ post_count }} posts &middot; built {{ build.time.strftime('%Y-%m-%d') }} from <a class="hover:text-accent" href="{{ site.repo_url }}/commit/{{ build.sha }}">{{ build.sha }}</a>
+                &middot; <a class="hover:text-accent" href="#top">back to top</a></p>
+        </div>
+    </div>
+    <script>
+        (() => {
+            const q = {{ site.quips | tojson }};
+            document.getElementById('quip').textContent = q[Math.floor(Math.random() * q.length)];
+        })();
+    </script>
+</footer>
+</body>
+</html>

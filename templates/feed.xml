@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.author }}</title>
+    <link>{{ site.url }}</link>
+    <description>{{ site.tagline }}</description>
+    {% for post in posts[:30] %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{ site.url }}/posts/{{ post.slug }}.html</link>
+      <guid>{{ site.url }}/posts/{{ post.slug }}.html</guid>
+      <pubDate>{{ post.date | rfc822 }}</pubDate>
+      <description>{{ post.summary }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
