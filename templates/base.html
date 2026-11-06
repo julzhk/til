@@ -91,7 +91,15 @@
 
 <header class="sticky top-0 z-20 bg-stone-50/85 dark:bg-stone-950/85 backdrop-blur border-b border-stone-200 dark:border-stone-800">
     <div class="max-w-4xl mx-auto px-5 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-        <a href="{{ root }}index.html" class="pt-4 sm:py-4 font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-accent transition-colors">{{ site.domain }}</a>
+        <a href="{{ root }}index.html" class="pt-4 sm:py-4 flex items-center gap-2 font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-accent transition-colors">{% include "crane.svg" %}{{ site.domain }}</a>
+        <script>
+            // Respect reduced-motion: jump the crane logo straight to its finished pose.
+            if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                const crane = document.getElementById('crane-logo');
+                crane.pauseAnimations();
+                crane.setCurrentTime(5);
+            }
+        </script>
         <nav aria-label="Main" class="-mx-5 px-5 sm:mx-0 sm:px-0 overflow-x-auto">
             <div class="flex gap-6 text-sm font-medium">
                 {% for key, label, href in nav %}

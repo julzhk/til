@@ -5,11 +5,11 @@
 
 {% macro nav_link(label, href, is_active) -%}
   {% if is_active %}
-  <a href="{{ href }}" aria-current="page" class="shrink-0 py-4 border-b-2 transition-colors text-stone-900 dark:text-stone-50 border-accent">{{ label }}</a>
+  <a href="{{ href }}" aria-current="page" class="shrink-0 py-4 border-b-2 transition-colors text-stone-900 dark:text-stone-50 border-accent hover:decoration-indigo-600/20">{{ label }}</a>
   {% else %}
   <a href="{{ href }}" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
   dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
-  hover:border-stone-100 dark:hover:border-stone-200">{{ label }}</a>
+  hover:border-stone-100 dark:hover:border-stone-200 hover:decoration-indigo-600/20">{{ label }}</a>
   {% endif %}
 {%- endmacro %}
 
@@ -68,8 +68,15 @@
 {%- endmacro %}
 
 
-{% macro project_card(project) -%}
-  <a href="{{ project.url }}" class="group block rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 p-5 hover:border-accent/60 transition-colors">
+{% macro project_card(project, root="") -%}
+  <a href="{{ project.url }}" class="group block overflow-hidden rounded-lg border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 hover:border-accent/60 transition-colors">
+    {% if project.image is defined %}
+    <div class="aspect-[16/9] overflow-hidden border-b border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-800">
+      <img src="{{ root }}{{ project.image }}" alt="{{ project.name }}" loading="lazy"
+           class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
+    </div>
+    {% endif %}
+    <div class="p-5">
     <div class="flex items-baseline justify-between gap-3">
       <h3 class="font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 group-hover:text-accent transition-colors">{{ project.name }}</h3>
       <span class="font-mono text-xs text-stone-400">{{ project.year }}</span>
@@ -80,13 +87,14 @@
       <span class="font-mono text-[11px] text-stone-500 dark:text-stone-400">{{ tag }}</span>
       {% endfor %}
     </div>
+    </div>
   </a>
 {%- endmacro %}
 
 
-{% macro project_grid(projects) -%}
+{% macro project_grid(projects, root="") -%}
   <div class="grid gap-4 sm:grid-cols-2">
-    {% for project in projects %}{{ project_card(project) }}{% endfor %}
+    {% for project in projects %}{{ project_card(project, root) }}{% endfor %}
   </div>
 {%- endmacro %}
 

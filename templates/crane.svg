@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="crane-logo" class="h-7 w-7 shrink-0" viewBox="0 0 64 64"
+     fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+  <!-- Origami crane logo: one sheet folds into a crane over 5s, then holds.
+       Each polygon morphs through five stages (values=):
+       square sheet; folded triangle; bird-base kite; neck and tail raised; wings open.
+       Drawn in currentColor so it follows the surrounding text colour. -->
+  <!-- body -->
+  <polygon points="24,40 32,35 40,40 32,46" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="14,36 32,18 50,36 32,54;14,36 32,18 50,36 32,36;25,38 32,16 39,38 32,52;24,40 32,35 40,40 32,46;24,40 32,35 40,40 32,46"/>
+  </polygon>
+  <!-- neck -->
+  <polygon points="24,40 30,44.5 10,22 10,22" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="14,36 32,54 50,36 32,18;14,36 32,36 50,36 32,18;25,38 32,52 32,38 32,38;24,40 30,44.5 10,22 10,22;24,40 30,44.5 10,22 10,22"/>
+  </polygon>
+  <!-- head -->
+  <polygon points="10,22 13,23 5,27 5,27" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="32,54 32,54 32,54 32,54;32,36 32,36 32,36 32,36;32,52 32,52 32,52 32,52;10,22 10,22 10,22 10,22;10,22 13,23 5,27 5,27"/>
+  </polygon>
+  <!-- tail -->
+  <polygon points="40,40 34,44.5 56,22 56,22" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="50,36 32,54 14,36 32,18;50,36 32,36 14,36 32,18;39,38 32,52 32,38 32,38;40,40 34,44.5 56,22 56,22;40,40 34,44.5 56,22 56,22"/>
+  </polygon>
+  <!-- front wing -->
+  <polygon points="32,35 37,38 42,8 42,8" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="32,18 50,36 14,36 32,18;32,18 50,36 14,36 32,18;32,38 39,38 32,16 32,16;32,35 35,37 32,13 32,13;32,35 37,38 42,8 42,8"/>
+  </polygon>
+  <!-- back wing -->
+  <polygon points="27,38 32,35 22,10 22,10" vector-effect="non-scaling-stroke">
+    <animate attributeName="points" dur="5s" fill="freeze" calcMode="spline" keyTimes="0;0.2;0.45;0.7;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"
+             values="14,36 32,18 50,36 32,18;14,36 32,18 50,36 32,18;25,38 32,38 32,16 32,16;29,37 32,35 32,13 32,13;27,38 32,35 22,10 22,10"/>
+  </polygon>
+</svg>
