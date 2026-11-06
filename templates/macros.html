@@ -7,7 +7,9 @@
   {% if is_active %}
   <a href="{{ href }}" aria-current="page" class="shrink-0 py-4 border-b-2 transition-colors text-stone-900 dark:text-stone-50 border-accent">{{ label }}</a>
   {% else %}
-  <a href="{{ href }}" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500 dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100 hover:border-stone-300 dark:hover:border-stone-600">{{ label }}</a>
+  <a href="{{ href }}" class="shrink-0 py-4 border-b-2 transition-colors text-stone-500
+  dark:text-stone-400 border-transparent hover:text-stone-900 dark:hover:text-stone-100
+  hover:border-stone-100 dark:hover:border-stone-200">{{ label }}</a>
   {% endif %}
 {%- endmacro %}
 

@@ -1,1 +1,4 @@
 _site/
+/til_deploy_key
+/til_deploy_key.pub
+/.obsidian/*

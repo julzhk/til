@@ -33,7 +33,8 @@ TEMPLATES_DIR = ROOT / "templates"
 SITE = {
     "author": "Julian Harley",
     "tagline": "Software developer. I build things. and think about things. and maybe write about them.",
-    "url": "https://julzhk.fly.dev",
+    "url": "https://julz.dev",
+    "domain": "julz.dev",
     "repo_url": "https://github.com/julzhk/til",
     "github_url": "https://github.com/julzhk",
     "email": "vinegar_mica.0d@icloud.com",
@@ -186,6 +187,7 @@ def main() -> None:
     render("feed.xml", "feed.xml")
 
     if STATIC_DIR.is_dir():
+        print(f"Copying static files from {STATIC_DIR} to {OUT}")
         shutil.copytree(STATIC_DIR, OUT, dirs_exist_ok=True)
     (OUT / ".nojekyll").touch()
     print(f"Built {len(posts)} posts and {len(pages)} pages into {OUT}")

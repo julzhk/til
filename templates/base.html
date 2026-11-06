@@ -17,8 +17,8 @@
                 extend: {
                     colors: {accent: 'rgb(var(--accent) / <alpha-value>)'},
                     fontFamily: {
-                        sans: ['"Inter"', 'system-ui', 'sans-serif'],
-                        serif: ['"Fraunces"', 'Georgia', 'serif'],
+                        sans: ['"Lato"', 'system-ui', 'sans-serif'],
+                        serif: ['"Cabin"', 'system-ui', 'sans-serif'],
                         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
                     },
                 }
@@ -57,7 +57,7 @@
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Lato:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -91,7 +91,7 @@
 
 <header class="sticky top-0 z-20 bg-stone-50/85 dark:bg-stone-950/85 backdrop-blur border-b border-stone-200 dark:border-stone-800">
     <div class="max-w-4xl mx-auto px-5 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-        <a href="{{ root }}index.html" class="pt-4 sm:py-4 font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-accent transition-colors">Jooles.dev</a>
+        <a href="{{ root }}index.html" class="pt-4 sm:py-4 font-serif text-lg font-semibold text-stone-900 dark:text-stone-50 hover:text-accent transition-colors">{{ site.domain }}</a>
         <nav aria-label="Main" class="-mx-5 px-5 sm:mx-0 sm:px-0 overflow-x-auto">
             <div class="flex gap-6 text-sm font-medium">
                 {% for key, label, href in nav %}
