@@ -55,9 +55,6 @@ SITE = {
 
 # projects, shown on the home page (first two) and the projects page.
 PROJECTS = [
-    {"name": "TIL", "image": "images/projects/til.jpg", "year": "2025",
-     "desc": "This site: a Markdown notebook turned into a static site by Python.",
-     "url": SITE["repo_url"], "tags": ["Python", "Markdown"]},
     {"name": "Screen Dream", "image": "images/projects/screendream.jpg", "year": "2026",
      "desc": "Music, rendered as worlds: an audio-reactive visualizer for macOS",
      "url": "https://github.com/julzhk/screendream#screendream", "tags": ["App", "Rust"]},
@@ -67,6 +64,9 @@ PROJECTS = [
     {"name": "Dino maze escape", "image": "images/projects/dino-maze.jpg", "year": "2025",
      "desc": "3D maze escape. Watch out for T.Rexes. And the Pterosaurs want to eat you too!",
      "url": "https://dino-seth.itch.io/dino-maze", "tags": ["Godot", "Game","Fun"]},
+    {"name": "TIL", "image": "images/projects/til.jpg", "year": "2025",
+     "desc": "This site: a Markdown notebook turned into a static site by Python.",
+     "url": SITE["repo_url"], "tags": ["Python", "Markdown"]},
 ]
 
 # (key, label, href) for the tab bar; a page's key marks its tab as active.
