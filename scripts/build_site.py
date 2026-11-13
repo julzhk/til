@@ -59,8 +59,11 @@ PROJECTS = [
      "desc": "Music, rendered as worlds: an audio-reactive visualizer for macOS",
      "url": "https://github.com/julzhk/screendream#screendream", "tags": ["App", "Rust"]},
     {"name": "Code Health Analysis", "image": "images/projects/git-analysis.jpg", "year": "2024",
-     "desc": "Uses git logs to measure code hotspots (eg:churn); changes in cyclometric complexity; maintainability",
-     "url": "https://github.com/julzhk/git-analysis#git-analysis", "tags": ["Git", "Python"]},
+     "desc": "Now a Claude Code skill: mines a repo's git history for hotspots (complex code that keeps changing), "
+             "churn and coupled files, then Claude explains what to refactor first, with an interactive HTML report.",
+     "usage": ["/plugin install git-code-quality --marketplace julzhk/git-analysis",
+               "Then ask: \"What are the code-quality hotspots in this repo?\""],
+     "url": "https://github.com/julzhk/git-analysis#git-analysis", "tags": ["Claude skill", "Git", "Python"]},
     {"name": "Dino maze escape", "image": "images/projects/dino-maze.jpg", "year": "2025",
      "desc": "3D maze escape. Watch out for T.Rexes. And the Pterosaurs want to eat you too!",
      "url": "https://dino-seth.itch.io/dino-maze", "tags": ["Godot", "Game","Fun"]},
