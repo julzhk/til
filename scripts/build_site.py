@@ -55,6 +55,10 @@ SITE = {
 
 # projects, shown on the home page (first two) and the projects page.
 PROJECTS = [
+    {"name": "Heist! Cops & Robbers", "image": "images/projects/heist-game.jpg", "year": "2026",
+     "desc": "A team board game of deception set in a 1940s noir town: robbers secretly plan a job while "
+             "the cops chase, search and must agree unanimously on the accusation. Rulebook and print & play kit included.",
+     "url": "https://julzhk.github.io/HeistGame/", "tags": ["Board game", "Game", "Fun"]},
     {"name": "Screen Dream", "image": "images/projects/screendream.jpg", "year": "2026",
      "desc": "Music, rendered as worlds: an audio-reactive visualizer for macOS",
      "url": "https://github.com/julzhk/screendream#screendream", "tags": ["App", "Rust"]},
