@@ -1,16 +1,17 @@
-TIL webGPU can be quite astonishing..
+TIL About two demos and a digression about LLMs and diagrams
+--
 
-This demo is quite amazing. Dreamy even.
+This started out as a 'gosh these two demos are nice' and I got distracted into something about communicating concepts with diagrams. 
 
-https://noniv.github.io/abyssal-garden/
+---
 
-source : 
-https://github.com/Noniv/abyssal-garden
+This demo is quite amazing. Dreamy even: [abyssal-garden](https://noniv.github.io/abyssal-garden/)
+& the source (via hacker news) : https://github.com/Noniv/abyssal-garden
 
-Is this edifying or instructional? Not really - I guess shaders are a complex and interesting niche I'd like to look at one day...
+Is this edifying or instructional? Not really - I guess shaders are a complex and interesting niche I'd like to look at one day.
 
 --- 
-And update, so I don't forget it; this is a charming and simple flying game : https://baron.by.dai.studio/ . And this fun demo was a nice hook to find out what `dai.studio` actually do!
+And update (so I don't forget it) this too is a charming and simple flying game : https://baron.by.dai.studio/ . And this fun demo was a nice hook to find out what `dai.studio` actually do!
 
 Turns out [dai.studio](https://about.dai.studio/blog/how-dai-started) is a communication tool between humans and LLMs. The clarity and layout of the tool is appealing : what's happening at a glance. 
 eg : https://dai.studio/blog/generating-an-auth-app-with-dai-studio
@@ -33,4 +34,4 @@ All formats have the problem of becoming unmaintained: Hence, at least make the 
 With the step change in the developer experience brought by LLMs, there's a lot of skills that were always valuable, but are going to be more important than ever: diagramming, UML, team 
 co-ordination, systems thinking, Stakeholder expectation management, managing sprawling legacy code....  
 
-And some that we're all likely to change our understanding and implementation: TDD, Agile, UX, Product development... 
+And some that we're all likely to change our understanding and implementation: TDD, Agile, UX, Product development...
