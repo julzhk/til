@@ -43,6 +43,8 @@ SITE = {
     "location": "somewhere with decent tea",
     "quips": [
         "No dinosaurs were harmed in the making of this website.",
+        "Guaranteed human thunks.",
+        "AI's are great, but these words are all mine.",
         "This page weighs less than a cookie banner.",
         "Written by a human. So typos are a feature.",
         "Best viewed with curiosity and a hot drink.",
