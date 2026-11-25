@@ -11,7 +11,8 @@ This demo is quite amazing. Dreamy even: [abyssal-garden](https://noniv.github.i
 Is this edifying or instructional? Not really - I guess shaders are a complex and interesting niche I'd like to look at one day.
 
 --- 
-And update (so I don't forget it) this too is a charming and simple flying game : https://baron.by.dai.studio/ . And this fun demo was a nice hook to find out what `dai.studio` actually do!
+And update (so I don't forget it) this too is a charming and simple flying game : [https://baron.by.dai.studio/](https://baron.by.dai.studio/) . And this fun demo was a nice hook to finding out what 
+`dai.studio` actually does!
 
 Turns out [dai.studio](https://about.dai.studio/blog/how-dai-started) is a communication tool between humans and LLMs. The clarity and layout of the tool is appealing : what's happening at a glance. 
 eg : https://dai.studio/blog/generating-an-auth-app-with-dai-studio
