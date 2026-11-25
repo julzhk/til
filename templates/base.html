@@ -28,14 +28,14 @@
                 {handler: function ({addBase}) {
                     addBase({
                         'a': {
-                            color: '#4f46e5', // text-indigo-600
+                            color: 'rgb(var(--accent))', // text-accent
                             textDecoration: 'none',
                             transitionProperty: 'all',
                             transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
                             transitionDuration: '200ms',
                         },
                         'a:hover': {
-                            color: '#3730a3', // text-indigo-800
+                            color: 'rgb(var(--accent))', // text-accent
                             textDecoration: 'underline',
                             textDecorationThickness: '2px',
                             textUnderlineOffset: '4px',
@@ -126,6 +126,7 @@
         ("GitHub", site.github_url, "github"),
         ("LinkedIn", site.linkedin_url, "linkedin"),
         ("Résumé", root ~ site.resume_path, "resume"),
+        ("Credly Microcredentials", root ~ site.credly, "graduation-cap"),
         ]) }}
         {{ ui.footer_links("Site", [
         ("Blog", root ~ "blog/index.html"),
